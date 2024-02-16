@@ -1,0 +1,16 @@
+<div class=" col-12 carousel">
+	<div class="col-12 slides">
+		<div #slide class="carousel-div slide col-12 d-flex justify-content-center align-items-center flex-column"
+		>
+			<img [src]="slides[activeSlideIndex]" alt="" >
+		</div>
+	</div>
+	<div class="carousel-action col-12">
+		<div class="d-flex justify-content-center align-items-center mb-3">
+		<i class="bi bi-circle-fill ms-3 text-white-50 click" (click)="activeIndex(0)"></i>
+		<i class="bi bi-circle-fill ms-3 text-info click" (click)="activeIndex(1)"></i>
+		<i class="bi bi-circle-fill ms-3 text-white-50 click" (click)="activeIndex(2)"></i>
+		<i class="bi bi-circle-fill ms-3 text-white-50 click" (click)="activeIndex(3)"></i>
+		</div>
+	</div>
+</div>

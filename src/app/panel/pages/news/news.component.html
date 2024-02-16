@@ -1,0 +1,32 @@
+<div class="col col-12 d-flex justify-content-center flex-wrap">
+	<div class="col col-12 headLine d-flex justify-content-center my-5">
+		<div class="txt_headLine">اخبار موسسه</div>
+	</div>
+	<div class="col col-12 p-3 mb-3 d-flex justify-content-center " *ngFor="let i of ['','','','']">
+		<div class="card col col-12 col-sm-8 ">
+			<div class="col col-12 card-body  d-flex justify-content-between flex-wrap">
+				<div class="col col-12 col-md-4">
+					<div class="card-imag p-3 bg_ ">
+						<img src="/assets/images/news/micheile-henderson-SoT4-mZhyhE-unsplash.jpg" alt="">
+					</div>
+				</div>
+				<div class="col col-12 col-md-8 mt-3 mt-md-0 d-flex">
+					<div class="card-txt d-flex flex-column justify-content-between align-self-stretch p-3 bg_ ms-0 ms-md-3">
+						<div class="col col-12 d-flex justify-content-center flex-wrap ">
+							<div class="card-text-title col col-12">آخرین اخبار</div>
+							<div class="card-text-desc col col-12 d-flex justify-content-start">
+								{{msg | slice:200}}
+							</div>
+						</div>
+						<div class="col col-12 d-flex justify-content-end align-items-center mt-3 ">
+							<a class="button button_green" [routerLink]="'123'">
+								ادامه مطلب
+								<span class="bi bi-arrow-left ms-3"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+#header {
+	height: 120px;
+	background-color: var(--color_indigo_500);
+}
+.logo{
+	height: 100px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden !important;
+	img{
+		position:absolute;
+		background-color: transparent;
+		border-radius: 50%;
+		width: 140px;
+		height: auto;
+		scale: 1;
+	}
+}

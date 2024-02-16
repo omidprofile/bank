@@ -1,0 +1,149 @@
+#sidebar {
+	position: absolute;
+	top: 80px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	
+	@media (min-width: 992px) {
+		left: unset;
+	}
+	
+	> #sidebar_sub {
+		width: 250px;
+		min-height: 100vh;
+		background-color: #fff;
+		box-shadow: 0 5px 5px #bbb;
+		
+		@media (max-width: 991px) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			overflow-y: auto;
+		}
+		
+		.items {
+			
+			> .item {
+				border-top:1px solid #eee;
+				> .this {
+					display: flex;
+					flex-wrap: nowrap;
+					align-items: center;
+					padding-right: 15px;
+					padding-left: 15px;
+					height: 40px;
+					cursor: pointer;
+					.icon {
+						margin-left: 5px;
+						width: 40px;
+						color: #999;
+						font-size: 16px;
+						display: flex;
+						flex-wrap: nowrap;
+						align-items: center;
+					}
+					.label {
+						font-size: 14px;
+					}
+					.icon_chevron {
+						margin-right: auto;
+						display: flex;
+						flex-wrap: nowrap;
+						align-items: center;
+						
+						.down {
+							display: flex;
+						}
+						.up {
+							display: none;
+						}
+					}
+					&:hover {
+						color: #fff !important;
+						background-color: var(--color_orange_500);
+						.icon {
+							color: #fff !important;
+						}
+					}
+				}
+				> .sub {
+					display: none;
+					background-color: #eee;
+					.item {
+						margin-bottom: 2px;
+						padding-right: 60px;
+						display: flex;
+						align-items: center;
+						height: 34px;
+						padding-top: 1px;
+						border-top:1px solid #ddd;
+						&:hover {
+							background-color: #ddd;
+						}
+						&.active {
+							color: #fff !important;
+							background-color: var(--color_orange_500);
+						}
+					}
+				}
+				
+				&.open {
+					
+					> .this  {
+						.icon_chevron {
+							.down {
+								display: none;
+							}
+							.up {
+								display: flex;
+							}
+						}
+						
+					}
+					> .sub {
+						display: block;
+					}
+				}
+				
+				&.active {
+					
+					> .this  {
+						color: #fff !important;
+						background-color: var(--color_orange_500);
+						.icon {
+							color: #fff !important;
+						}
+						
+						.icon_chevron {
+							.down {
+								display: none;
+							}
+							.up {
+								display: flex;
+							}
+						}
+						
+					}
+					> .sub {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	
+	> .bg_area {
+		width: calc(100% - 250px);
+		background-color: rgba(0, 0, 0, 0.3);
+		@media (max-width: 991px) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			min-height: 100vh;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+.login-page{
+  //background: rgb(255,135,0);
+  //background: linear-gradient(59deg, rgba(255,135,0,1) 0%, rgba(21,26,228,0.6453431714482668) 50%, rgba(255,135,0,1) 100%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/assets/images/carousel/etienne-martin-2_K82gx9Uk8-unsplash.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background: transparent;
+  border: 2px solid #a5a5a5;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+}
+
+.input-box{
+  input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+  }
+  border-bottom: 2px solid var(--color_orange_500);
+  margin-bottom: 30px;
+  transition: .5s;
+}
+
+label{
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-weight: 500;
+  transition: .5s;
+  color: var(--color_orange_500);
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+  transition: .5s;
+  top: 5px;
+}
+
+
+
+
+.img{
+  padding: 20px;
+  width: 150px;
+}
+
+.reg{
+  background-color: #a5a5a5;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 2px 30px;
+}
